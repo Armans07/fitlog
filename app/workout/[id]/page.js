@@ -49,11 +49,13 @@ export default async function WorkoutDetailPage({ params }) {
 
           <p className="mt-4 text-white/60">{workout.description}</p>
 
-          <div className="card mt-8 divide-y divide-line">
-            {SPEC_ROWS.map((row) => (
+          <div className="card mt-8 overflow-hidden">
+            {SPEC_ROWS.map((row, index) => (
               <div
                 key={row.label}
-                className="flex items-center justify-between px-5 py-3 text-sm"
+                className={`flex items-center justify-between px-5 py-3 text-sm ${
+                  index % 2 === 1 ? "bg-white/[0.03]" : ""
+                }`}
               >
                 <span className="font-semibold uppercase tracking-wide text-white/50">
                   {row.label}
