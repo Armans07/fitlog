@@ -72,9 +72,9 @@ export default function PlanWorkoutCard({
           type="button"
           onClick={() => onRemove(workout.id)}
           aria-label="Remove"
-          className="flex h-8 w-8 items-center justify-center rounded-full border border-white/30 hover:bg-white/10"
+          className="flex h-8 w-8 items-center justify-center rounded-full text-white/50 transition hover:bg-white/10 hover:text-white"
         >
-          <X size={14} />
+          <X size={16} />
         </button>
       </div>
     </div>
