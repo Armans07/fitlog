@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { getAllWorkouts } from "@/lib/data";
 import LibrarySection from "@/components/LibrarySection";
+import bannerImg from "../assets/banner.png"
 
 export default async function HomePage() {
   const workouts = await getAllWorkouts();
@@ -33,7 +34,7 @@ export default async function HomePage() {
 
           <div className="relative h-64 w-full overflow-hidden rounded-3xl bg-white/5 sm:h-80 lg:h-[420px]">
             <Image
-              src="https://img.magnific.com/free-photo/portrait-anime-character-doing-fitness-exercising_23-2151666664.jpg?w=740"
+              src={bannerImg}
               alt="Athlete training with a barbell"
               fill
               priority
