@@ -8,9 +8,9 @@ module.exports = {
     extend: {
       colors: {
         accent: "#ccff00",
-        panel: "#171717",
-        base: "#0d0d0d",
-        line: "#2a2a2a",
+        panel: "#15171d",
+        base: "#1e1e1e",
+        line: "#282b33",
       },
       fontFamily: {
         display: ["var(--font-oswald)", "sans-serif"],
