@@ -4,7 +4,7 @@ FitLog is a dark, no-nonsense gym companion built for a frontend assignment. Bro
 
 ## 🔗 Live Demo
 
-_Add your deployed link here after you deploy (see Deployment section below)._
+https://fitlog-nine-pink.vercel.app/
 
 ## 🛠️ Technologies Used
 
