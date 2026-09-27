@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+}
+
+.badge {
+  @apply inline-flex items-center justify-center rounded-full px-3 py-1 text-xs font-bold tracking-wide;
+}
+
+.badge-filled {
+  @apply badge bg-accent text-black;
+}
+
+.badge-outline {
+  @apply badge border border-white/40 text-white;
+}
+
+.card {
+  @apply bg-panel border border-line rounded-2xl overflow-hidden;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 font-bold text-black transition hover:brightness-110 disabled:opacity-40 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-6 py-3 font-bold text-white transition hover:bg-white/10;
+}
+
+.tag-pill {
+  @apply rounded-full bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white/80;
+}
+
+.stat-icon {
+  @apply flex items-center gap-1 text-sm text-white/70;
+}
