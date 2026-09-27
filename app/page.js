@@ -31,15 +31,15 @@ export default async function HomePage() {
               <ArrowRight size={18} />
             </a>
           </div>
-
-          <div className="relative h-64 w-full overflow-hidden rounded-3xl bg-white/5 sm:h-80 lg:h-[420px]">
+             
+          <div className="relative h-64  overflow-hidden rounded-3xl  sm:h-80 lg:h-[420px]">
             <Image
               src={bannerImg}
               alt="Athlete training with a barbell"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
+              className=""
             />
           </div>
         </div>
