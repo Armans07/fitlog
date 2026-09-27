@@ -24,7 +24,7 @@ export default function Navbar() {
           FitLog
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-2 md:flex">
           {links.map((link) => {
             const isActive =
               link.href === "/my-plan"
@@ -34,11 +34,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className={`text-sm font-semibold uppercase tracking-wide transition ${
-                  isActive
-                    ? "text-accent"
-                    : "text-white/70 hover:text-white"
-                }`}
+                className={isActive ? "nav-link-active" : "nav-link-inactive"}
               >
                 {link.label}
               </Link>
@@ -46,18 +42,24 @@ export default function Navbar() {
           })}
         </nav>
 
-        <div className="flex items-center gap-3">
-          <Link href="/my-plan" className="badge-filled">
-            Plan {plan.length}
+        <div className="flex items-center gap-4">
+          <Link href="/my-plan" className="flex items-center gap-2">
+            <span className="text-xs font-semibold uppercase tracking-wide text-white/60">
+              Plan
+            </span>
+            <span className="badge-dot-filled">{plan.length}</span>
           </Link>
-          <Link href="/my-plan" className="badge-outline">
-            Saved {saved.length}
+          <Link href="/my-plan" className="flex items-center gap-2">
+            <span className="text-xs font-semibold uppercase tracking-wide text-white/60">
+              Saved
+            </span>
+            <span className="badge-dot-outline">{saved.length}</span>
           </Link>
         </div>
       </div>
 
       {/* simple mobile nav row under the main bar */}
-      <nav className="flex items-center justify-center gap-6 border-t border-line py-2 md:hidden">
+      <nav className="flex items-center justify-center gap-3 border-t border-line py-2 md:hidden">
         {links.map((link) => {
           const isActive =
             link.href === "/my-plan" ? pathname === "/my-plan" : pathname === "/";
@@ -65,9 +67,11 @@ export default function Navbar() {
             <Link
               key={link.label}
               href={link.href}
-              className={`text-xs font-semibold uppercase tracking-wide ${
-                isActive ? "text-accent" : "text-white/70"
-              }`}
+              className={
+                isActive
+                  ? "nav-link-active text-xs"
+                  : "nav-link-inactive text-xs"
+              }
             >
               {link.label}
             </Link>
