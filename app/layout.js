@@ -1,0 +1,47 @@
+import { Oswald, Inter } from "next/font/google";
+import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { PlanProvider } from "@/components/PlanProvider";
+import { Toaster } from "react-hot-toast";
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  variable: "--font-oswald",
+  weight: ["500", "600", "700"],
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+export const metadata = {
+  title: "FitLog — Workout Library",
+  description:
+    "FitLog is a dark, no-nonsense gym companion: pick a lift, lock it into today's plan, and watch the week's work add up.",
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en" className={`${oswald.variable} ${inter.variable}`}>
+      <body className="font-body">
+        <PlanProvider>
+          <Navbar />
+          <main className="min-h-[70vh]">{children}</main>
+          <Footer />
+          <Toaster
+            position="bottom-center"
+            toastOptions={{
+              style: {
+                background: "#171717",
+                color: "#fff",
+                border: "1px solid #2a2a2a",
+              },
+            }}
+          />
+        </PlanProvider>
+      </body>
+    </html>
+  );
+}
